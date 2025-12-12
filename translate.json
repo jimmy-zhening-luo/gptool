@@ -1,0 +1,44 @@
+{
+  "name": "translate",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "languages": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string",
+            "description": "The language of the provided text",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "target": {
+            "type": "string",
+            "description": "The target language into which to translate the provided text",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "origin",
+          "target"
+        ]
+      },
+      "translation": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "The translation of the provided text, or null if the provided text cannot be translated",
+        "minLength": 1
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "languages",
+      "translation"
+    ]
+  }
+}

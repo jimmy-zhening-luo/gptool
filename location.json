@@ -1,0 +1,20 @@
+{
+  "name": "format_address",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "address": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "The extracted address formatted on one line (500 Cooper Rd, Fresno, CA 93650), or null if no address can be extracted"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "address"
+    ]
+  }
+}

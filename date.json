@@ -1,0 +1,31 @@
+{
+  "name": "find_date",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "date": {
+        "anyOf": [
+          {
+            "type": "string",
+            "description": "The date-time if the date has a time component",
+            "format": "date-time"
+          },
+          {
+            "type": "string",
+            "description": "The date if the date does have a time component",
+            "format": "date"
+          },
+          {
+            "type": "null",
+            "description": "Null if no date was found"
+          }
+        ]
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "date"
+    ]
+  }
+}

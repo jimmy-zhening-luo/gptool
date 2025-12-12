@@ -1,0 +1,56 @@
+{
+  "name": "find_airport",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "location": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "description": "The inferred location query, or null if no location query can be inferred"
+      },
+      "airports": {
+        "type": [
+          "array",
+          "null"
+        ],
+        "description": "The airport or ordered list of airports highly relevant to the location query, ordered from most to least relevant, or null if no location is inferred or if there are no airport results",
+        "min_items": 1,
+        "max_items": 10,
+        "items": {
+          "type": "object",
+          "properties": {
+            "iata_code": {
+              "type": "string",
+              "description": "The three-letter IATA airport code for the airport",
+              "pattern": "^[A-Z]{3}$"
+            },
+            "name": {
+              "type": "string",
+              "description": "The airport's full, official name in English",
+              "minLength": 1,
+              "maxLength": 150
+            },
+            "is_international": {
+              "type": "boolean",
+              "description": "True if the airport is located in a country other than the United States, otherwise false"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "iata_code",
+            "name",
+            "is_international"
+          ]
+        }
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "location",
+      "airports"
+    ]
+  }
+}

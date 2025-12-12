@@ -1,0 +1,25 @@
+?start: calculations
+?calculations: calculations SEP calculation
+  | calculation
+?calculation: expression conversion?
+?expression: expression OPS product
+  | product
+?product: product OPP atom
+  | atom
+?atom: SIGNED_NUMBER
+  | FUNC closure
+  | closure
+?closure: PL expression PR
+?conversion: unit CONVERT unit
+?unit: WUNIT+
+SEP: "&"
+OPS: "+" | "-"
+OPP: "*" | "/"
+FUNC: "round" | "floor" | "ceil" | "abs"
+PL: "("
+PR: ")"
+CONVERT: "TO"
+WUNIT: /[a-z]+/
+%import common.SIGNED_NUMBER
+%import common.WS
+%ignore WS
