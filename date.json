@@ -13,7 +13,7 @@
           },
           {
             "type": "string",
-            "description": "The date if the date does have a time component",
+            "description": "The date if the date does not have a time component",
             "format": "date"
           },
           {
