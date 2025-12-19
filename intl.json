@@ -1,0 +1,17 @@
+{
+  "name": "international_airport",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "international": {
+        "type": "boolean",
+        "description": "True if one or both of the provided airports are located outside of the United States, otherwise false."
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "international"
+    ]
+  }
+}
