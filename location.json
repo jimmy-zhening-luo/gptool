@@ -9,7 +9,7 @@
           "string",
           "null"
         ],
-        "description": "The extracted address formatted on one line (500 Cooper Rd, Fresno, CA 93650), or null if no address can be extracted"
+        "description": "The extracted address formatted onto a single line with no line breaks (e.g., 500 Cooper Rd, Fresno, CA 93650), or null if no address can be extracted"
       }
     },
     "additionalProperties": false,
