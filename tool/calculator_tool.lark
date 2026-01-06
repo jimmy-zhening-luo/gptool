@@ -1,4 +1,4 @@
-?start: start SEP calculation
+?start: start "&" calculation
   | calculation
 ?calculation: expression conversion?
 ?expression: expression OP product
@@ -9,16 +9,12 @@
   | FUNC closure
   | closure
   | expression
-?closure: PL expression PR
-?conversion: unit TO unit
+?closure: "(" expression ")"
+?conversion: unit "TO" unit
 ?unit: WUNIT+
-SEP: "&"
 OP: "+" | "-"
 OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil" | "abs"
-PL: "("
-PR: ")"
-TO: "TO"
 WUNIT: /[a-z]+/
 N: OP DECIMAL | SIGNED_INT
 %import common.DECIMAL
