@@ -15,8 +15,7 @@ OPP: "*" | "/"
 OP: "+" | "-"
 N: OP? DECIMAL | SIGNED_INT
 FUNC: "round" | "floor" | "ceil"
-LWORD: LCASE_LETTER+
-%import common.LCASE_LETTER
+LWORD: /[a-z]+/
 %import common.DECIMAL
 %import common.SIGNED_INT
 %import common.WS
