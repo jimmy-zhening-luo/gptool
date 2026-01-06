@@ -16,7 +16,7 @@ OP: "+" | "-"
 OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil" | "abs"
 WUNIT: LCASE_LETTER+
-N: OP DECIMAL | SIGNED_INT
+N: OP? DECIMAL | SIGNED_INT
 %import common.LCASE_LETTER
 %import common.DECIMAL
 %import common.SIGNED_INT
