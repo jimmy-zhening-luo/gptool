@@ -8,15 +8,15 @@
   | expression OP product
 ?product: atom
   | product OPP atom
-?atom: N
+?atom: expression
   | FUNC? "(" expression ")"
-  | expression
-OPP: "*" | "/"
-OP: "+" | "-"
-N: OP? DECIMAL | SIGNED_INT
-FUNC: "round" | "floor" | "ceil"
+  | N
 LWORD: /[a-z]+/
-%import common.DECIMAL
+OP: "+" | "-"
+OPP: "*" | "/"
+FUNC: "round" | "floor" | "ceil"
+N: OP? DECIMAL | SIGNED_INT
 %import common.SIGNED_INT
+%import common.DECIMAL
 %import common.WS
 %ignore WS
