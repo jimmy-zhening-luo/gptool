@@ -1,5 +1,4 @@
-?start: calculations
-?calculations: calculations SEP calculation
+?start: start SEP calculation
   | calculation
 ?calculation: expression conversion?
 ?expression: expression OPS product
