@@ -11,7 +11,7 @@
 ?atom: N
   | expression
   | FUNC? "(" expression ")"
-LWORD: /[a-z]+/
+LWORD: /\b[a-z]+\b/
 FUNC: "round" | "floor" | "ceil"
 OPP: "*" | "/"
 OP: "+" | "-"
