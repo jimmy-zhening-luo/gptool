@@ -1,7 +1,7 @@
 ?start: start SEP calculation
   | calculation
 ?calculation: expression conversion?
-?expression: expression OPS product
+?expression: expression OP product
   | product
 ?product: product OPP atom
   | atom
@@ -12,7 +12,7 @@
 ?conversion: unit CONVERT unit
 ?unit: WUNIT+
 SEP: "&"
-OPS: "+" | "-"
+OP: "+" | "-"
 OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil" | "abs"
 PL: "("
