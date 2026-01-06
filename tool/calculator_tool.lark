@@ -8,6 +8,7 @@
 ?atom: SIGNED_NUMBER
   | FUNC closure
   | closure
+  | expression
 ?closure: PL expression PR
 ?conversion: unit CONVERT unit
 ?unit: WUNIT+
