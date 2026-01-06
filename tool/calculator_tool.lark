@@ -1,7 +1,7 @@
 ?start: inputs
 ?inputs: calculation
   | inputs "&" calculation
-?calculation: expression [unit "TO" unit]
+?calculation: expression [unit " TO " unit]
 ?unit: LWORD
   | unit LWORD
 ?expression: product
@@ -11,7 +11,7 @@
 ?atom: N
   | expression
   | FUNC? "(" expression ")"
-LWORD: /\b[a-z]+\b/
+LWORD: /[a-z]+/
 FUNC: "round" | "floor" | "ceil"
 OPP: "*" | "/"
 OP: "+" | "-"
