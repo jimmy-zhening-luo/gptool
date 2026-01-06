@@ -11,11 +11,11 @@
 ?atom: N
   | FUNC? "(" expression ")"
   | expression
-LWORD: LCASE_LETTER+
 OPP: "*" | "/"
 OP: "+" | "-"
 N: OP? DECIMAL | SIGNED_INT
 FUNC: "round" | "floor" | "ceil"
+LWORD: LCASE_LETTER+
 %import common.LCASE_LETTER
 %import common.DECIMAL
 %import common.SIGNED_INT
