@@ -5,7 +5,7 @@
   | product
 ?product: product OPP atom
   | atom
-?atom: SIGNED_NUMBER
+?atom: N
   | FUNC closure
   | closure
   | expression
@@ -20,6 +20,8 @@ PL: "("
 PR: ")"
 TO: "TO"
 WUNIT: /[a-z]+/
-%import common.SIGNED_NUMBER
+N: OP DECIMAL | SIGNED_INT
+%import common.DECIMAL
+%import common.SIGNED_INT
 %import common.WS
 %ignore WS
