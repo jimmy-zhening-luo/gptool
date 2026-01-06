@@ -9,9 +9,10 @@
 ?atom: N
   | FUNC? "(" expression ")"
   | expression
-?unit: WUNIT+
+?unit: LWORD
+  | unit LWORD
+LWORD: LCASE_LETTER+
 FUNC: "round" | "floor" | "ceil" | "abs"
-WUNIT: LCASE_LETTER+
 OPP: "*" | "/"
 OP: "+" | "-"
 N: OP? DECIMAL | SIGNED_INT
