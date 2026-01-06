@@ -1,6 +1,6 @@
 Evaluates and returns calculated result(s).
 
-- `+-*/`, round, floor, ceil, abs
+- `+-*/`, round, floor, ceil
 - Tail-end unit conversion: currency as lowercase ISO4217 code (usd), otherwise full, lowercase name (square foot)
 
 Evaluates multiple calculations separated by '&' and returns results in the same order, comma-separated.
