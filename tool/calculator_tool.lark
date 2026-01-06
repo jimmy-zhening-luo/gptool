@@ -12,10 +12,10 @@
 ?closure: "(" expression ")"
 ?conversion: unit "TO" unit
 ?unit: WUNIT+
-OP: "+" | "-"
-OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil" | "abs"
 WUNIT: LCASE_LETTER+
+OPP: "*" | "/"
+OP: "+" | "-"
 N: OP? DECIMAL | SIGNED_INT
 %import common.LCASE_LETTER
 %import common.DECIMAL
