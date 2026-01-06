@@ -2,10 +2,10 @@
 ?inputs: calculation
   | inputs "&" calculation
 ?calculation: expression conversion?
-?expression: expression OP product
-  | product
-?product: product OPP atom
-  | atom
+?expression: product
+  | expression OP product
+?product: atom
+  | product OPP atom
 ?atom: N
   | FUNC closure
   | closure
