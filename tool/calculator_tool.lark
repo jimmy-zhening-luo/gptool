@@ -8,13 +8,13 @@
   | expression OP product
 ?product: atom
   | product OPP atom
-?atom: expression
+?atom: N
+  | expression
   | FUNC? "(" expression ")"
-  | N
 LWORD: /[a-z]+/
-OP: "+" | "-"
-OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil"
+OPP: "*" | "/"
+OP: "+" | "-"
 N: OP? DECIMAL | SIGNED_INT
 %import common.SIGNED_INT
 %import common.DECIMAL
