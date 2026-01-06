@@ -10,7 +10,7 @@
   | closure
   | expression
 ?closure: PL expression PR
-?conversion: unit CONVERT unit
+?conversion: unit TO unit
 ?unit: WUNIT+
 SEP: "&"
 OP: "+" | "-"
@@ -18,7 +18,7 @@ OPP: "*" | "/"
 FUNC: "round" | "floor" | "ceil" | "abs"
 PL: "("
 PR: ")"
-CONVERT: "TO"
+TO: "TO"
 WUNIT: /[a-z]+/
 %import common.SIGNED_NUMBER
 %import common.WS
