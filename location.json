@@ -9,7 +9,8 @@
           "string",
           "null"
         ],
-        "description": "The extracted address formatted onto a single line with no line breaks, or null if no address can be extracted"
+        "description": "The extracted address formatted onto a single line with no line breaks, or null if no address can be extracted",
+        "minLength": 1
       }
     },
     "additionalProperties": false,
