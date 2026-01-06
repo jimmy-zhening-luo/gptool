@@ -7,10 +7,8 @@
 ?product: atom
   | product OPP atom
 ?atom: N
-  | FUNC closure
-  | closure
+  | FUNC? "(" expression ")"
   | expression
-?closure: "(" expression ")"
 ?unit: WUNIT+
 FUNC: "round" | "floor" | "ceil" | "abs"
 WUNIT: LCASE_LETTER+
