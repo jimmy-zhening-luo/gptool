@@ -5,18 +5,13 @@
 ?unit: LWORD
   | unit LWORD
 ?expression: product
-  | expression OP product
+  | expression ("+" | "-") product
 ?product: atom
-  | product OPP atom
-?atom: N
+  | product ("*" | "/") atom
+?atom: SIGNED_NUMBER
   | expression
-  | FUNC? "(" expression ")"
+  | ["round" | "floor" | "ceil"] "(" expression ")"
 LWORD: /[a-z]+/
-FUNC: "round" | "floor" | "ceil"
-OPP: "*" | "/"
-OP: "+" | "-"
-N: OP? DECIMAL | SIGNED_INT
-%import common.SIGNED_INT
-%import common.DECIMAL
+%import common.SIGNED_NUMBER
 %import common.WS
 %ignore WS
