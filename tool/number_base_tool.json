@@ -15,7 +15,8 @@
         "type": "array",
         "description": "The number(s) to convert. A number in any base must be a whole integer value greater than or equal to zero. No leading zeros or trailing decimal points are allowed. Do not prefix or postfix the number with any sort of base indicator, e.g. the hexadeximal number 8f should be written 8f, not 0x8f",
         "items": {
-          "$ref": "#/$defs/number"
+          "type": "string",
+          "pattern": "^0$|^(?:1[01]*|[1-9]\\d*|[1-9a-f][\\da-f]*)$"
         },
         "minItems": 1
       }
@@ -28,10 +29,6 @@
           "decimal",
           "hexadecimal"
         ]
-      },
-      "number": {
-        "type": "string",
-        "pattern": "^0$|^(?:1[01]*|[1-9]\\d*|[1-9a-f][\\da-f]*)$"
       }
     },
     "additionalProperties": false,
