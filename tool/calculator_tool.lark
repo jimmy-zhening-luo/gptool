@@ -1,7 +1,7 @@
 ?start: inputs
 ?inputs: calculation
   | inputs "&" calculation
-?calculation: expression [unit " TO " unit]
+?calculation: expression [" " unit " TO " unit]
 ?unit: LWORD
   | unit LWORD
 ?expression: product
