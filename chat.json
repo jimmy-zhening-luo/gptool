@@ -4,13 +4,6 @@
   "schema": {
     "type": "object",
     "properties": {
-      "question": {
-        "type": [
-          "string",
-          "null"
-        ],
-        "description": "The inferred question, or null if no question can be inferred"
-      },
       "answer": {
         "description": "The answer to the question, or null either if no question can be inferred or if the inferred question cannot be answered",
         "anyOf": [
@@ -29,7 +22,6 @@
     },
     "additionalProperties": false,
     "required": [
-      "question",
       "answer"
     ]
   }
