@@ -1,5 +1,5 @@
 {
-  "name": "number_base_tool",
+  "name": "number_radix",
   "description": "Change a number base from one radix to another",
   "strict": true,
   "parameters": {

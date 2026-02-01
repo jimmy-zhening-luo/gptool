@@ -1,5 +1,5 @@
 {
-  "name": "date_difference_tool",
+  "name": "date_difference",
   "description": "Calculate the time elapsed from start date until end date. e.g. given start date November 5, 2020 and end date November 9, 2020, the time elapsed in days is 4",
   "strict": true,
   "parameters": {
