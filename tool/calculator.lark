@@ -1,17 +1,17 @@
 ?start: inputs
 ?inputs: calculation
   | inputs "&" calculation
-?calculation: expression [" " unit " TO " unit]
-?unit: LWORD
-  | unit LWORD
+?calculation: expression [unit "TO" unit]
 ?expression: product
   | expression ("+" | "-") product
 ?product: atom
   | product ("*" | "/") atom
 ?atom: SIGNED_NUMBER
-  | expression
   | ["round" | "floor" | "ceil"] "(" expression ")"
-LWORD: /[a-z]+/
+?unit: LWORD
+  | unit LWORD
+LWORD: LCASE_LETTER+
+%import common.LCASE_LETTER
 %import common.SIGNED_NUMBER
-%import common.WS
-%ignore WS
+%import common.WS_INLINE
+%ignore WS_INLINE
