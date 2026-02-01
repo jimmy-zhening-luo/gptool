@@ -1,5 +1,5 @@
 {
-  "name": "answer",
+  "name": "ask",
   "strict": true,
   "schema": {
     "type": "object",
