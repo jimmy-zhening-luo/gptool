@@ -1,23 +1,13 @@
 {
   "name": "date_difference",
-  "description": "Calculate the time elapsed from start date until end date. e.g. given start date November 5, 2020 and end date November 9, 2020, the time elapsed in days is 4",
+  "description": "Given a date, calculate how long between the date and a given target date, or calculate the resulting date by adding a given time-delta to the date",
   "strict": true,
   "parameters": {
     "type": "object",
     "properties": {
-      "start": {
-        "type": "string",
-        "description": "The start date",
-        "format": "date-time"
-      },
-      "end": {
-        "type": "string",
-        "description": "The end date",
-        "format": "date-time"
-      },
       "unit": {
         "type": "string",
-        "description": "The unit of time in which the difference is given",
+        "description": "The time-unit in which the difference is given",
         "enum": [
           "Seconds",
           "Minutes",
@@ -27,13 +17,31 @@
           "Months",
           "Years"
         ]
+      },
+      "date": {
+        "type": "string",
+        "description": "The date on which to operate",
+        "format": "date-time"
+      },
+      "difference": {
+        "anyOf": [
+          {
+            "type": "string",
+            "description": "The target date from which to calculate the time-delta",
+            "format": "date-time"
+          },
+          {
+            "type": "number",
+            "description": "The time-delta to apply to the start date (positive → future, negative → past) given in the specified unit"
+          }
+        ]
       }
     },
     "additionalProperties": false,
     "required": [
-      "start",
-      "end",
-      "unit"
+      "unit",
+      "date",
+      "difference"
     ]
   }
 }
