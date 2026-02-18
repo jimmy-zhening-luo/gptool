@@ -1,5 +1,5 @@
 {
-  "name": "date_difference",
+  "name": "time-delta",
   "description": "Given a date, calculate how long between the date and a given target date, or calculate the resulting date by adding a given time-delta to the date",
   "strict": true,
   "parameters": {
